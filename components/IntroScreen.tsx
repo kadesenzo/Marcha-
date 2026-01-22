@@ -6,14 +6,13 @@ const IntroScreen: React.FC = () => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Stage 1: Progress Bar (Iniciando Ecossistema)
     const interval = setInterval(() => {
       setProgress((prev) => (prev < 100 ? prev + 2 : 100));
     }, 40);
 
-    const timer1 = setTimeout(() => setStage(2), 2200); // KADES$ Impact
-    const timer2 = setTimeout(() => setStage(3), 4800); // Welcome Message
-    const timer3 = setTimeout(() => setStage(4), 6500); // Final Sync
+    const timer1 = setTimeout(() => setStage(2), 2200); 
+    const timer2 = setTimeout(() => setStage(3), 4800); 
+    const timer3 = setTimeout(() => setStage(4), 6500); 
 
     return () => {
       clearInterval(interval);
@@ -77,7 +76,7 @@ const IntroScreen: React.FC = () => {
       )}
 
       <div className="absolute bottom-12 opacity-30 z-10">
-        <p className="text-[7px] font-black tracking-[1.2em] text-zinc-500 uppercase">Kades Core Engine v4.0</p>
+        <p className="text-[7px] font-black tracking-[1.2em] text-zinc-500 uppercase">Kades Core Engine</p>
       </div>
     </div>
   );

@@ -14,13 +14,6 @@ const Hero: React.FC<{ onAccessSystem: () => void }> = ({ onAccessSystem }) => {
       </div>
       
       <div className="max-w-5xl mx-auto space-y-12 md:space-y-20 relative z-10">
-        <div className="animate-ios-fade">
-          <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full border border-red-600/30 bg-red-600/5 backdrop-blur-xl">
-            <Icons.Zap />
-            <span className="text-[9px] font-black tracking-[0.5em] text-red-500 uppercase">Sistema de Revenda Elite v4.0</span>
-          </div>
-        </div>
-        
         <div className="space-y-8">
             <h1 className="text-6xl md:text-9xl font-poppins font-black leading-[0.85] tracking-tighter text-white uppercase italic animate-[fadeIn_1s_ease]">
               KADES <br/>
@@ -28,25 +21,29 @@ const Hero: React.FC<{ onAccessSystem: () => void }> = ({ onAccessSystem }) => {
             </h1>
             <p className="text-sm md:text-2xl text-zinc-500 max-w-2xl mx-auto font-bold leading-relaxed animate-[fadeIn_1.2s_ease] px-4 tracking-tight">
               A pessoa não compra o acesso, ela entra para <span className="text-white">REVENDER</span>. 
-              Ganha comissão real com seu link de afiliado através da nossa tecnologia bionica.
+              Ganha comissão com SEU link de afiliado. O ecossistema completo para escala.
             </p>
         </div>
-        
-        <div className="flex flex-col items-center space-y-16 animate-[fadeIn_1.4s_ease]">
+
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 animate-[fadeIn_1.4s_ease]">
           <button 
             onClick={onAccessSystem}
-            className="group relative bg-white text-black px-16 py-6 md:px-24 md:py-8 rounded-[2rem] font-poppins font-black text-xs md:text-lg transition-all hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(255,255,255,0.15)] flex items-center justify-center gap-4"
+            className="w-full md:w-auto bg-red-600 hover:bg-red-700 text-white px-12 py-6 rounded-full font-black uppercase tracking-[0.2em] text-xs transition-all transform hover:scale-105 shadow-2xl shadow-red-600/40 active:scale-95 flex items-center justify-center gap-3 group"
           >
-            <span className="uppercase tracking-widest">Acessar Sistema</span>
+            Acessar Sistema <Icons.Zap />
           </button>
           
-          <div className="flex flex-col items-center space-y-4 opacity-20">
-             <span className="text-[8px] font-black tracking-[0.6em] uppercase text-zinc-400 italic">Scroll para saber mais</span>
-             <div className="animate-bounce text-zinc-500">
-                <Icons.ArrowDown />
-             </div>
-          </div>
+          <a 
+            href="#como-funciona"
+            className="w-full md:w-auto bg-white/5 hover:bg-white/10 text-white px-12 py-6 rounded-full font-black uppercase tracking-[0.2em] text-xs transition-all border border-white/10 flex items-center justify-center gap-3"
+          >
+            Saber Mais <Icons.ArrowDown />
+          </a>
         </div>
+      </div>
+      
+      <div className="mt-32 opacity-20 animate-bounce">
+         <Icons.ArrowDown />
       </div>
     </section>
   );
